@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/mainPageFragment">
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.example.personsapp.ui.fragment.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/mainPageToDetail"
+            app:destination="@id/personsDetailFragment" />
+        <action
+            android:id="@+id/mainPageToRegister"
+            app:destination="@id/personsRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personsDetailFragment"
+        android:name="com.example.personsapp.ui.fragment.PersonsDetailFragment"
+        android:label="fragment_persons_detail"
+        tools:layout="@layout/fragment_persons_detail" />
+    <fragment
+        android:id="@+id/personsRegisterFragment"
+        android:name="com.example.personsapp.ui.fragment.PersonsRegisterFragment"
+        android:label="PersonsRegisterFragment"
+        tools:layout="@layout/fragment_persons_detail"/>
+</navigation>
